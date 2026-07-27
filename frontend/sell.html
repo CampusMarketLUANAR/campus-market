@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Item - Campus Market</title>
+
+    <link rel="stylesheet" href="sell.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+
+        <h1>📦 Sell an Item</h1>
+
+        <p>
+            List your product for thousands of students.
+        </p>
+
+    </div>
+
+    <a href="index.html">
+
+        <button class="home-btn">
+
+            🏠 Home
+
+        </button>
+
+    </a>
+
+</header>
+
+<main class="sell-container">
+
+    <div class="sell-card">
+
+        <h2>
+
+            Product Information
+
+        </h2>
+
+        <form id="productForm">
+
+            <div class="form-group">
+
+                <label>
+
+                    Product Name
+
+                </label>
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="e.g. HP Laptop"
+                    required>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+
+                    Price (MWK)
+
+                </label>
+
+                <input
+                    id="price"
+                    type="number"
+                    placeholder="Enter price"
+                    required>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+
+                    Category
+
+                </label>
+
+                <select
+                    id="category"
+                    required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Books">
+                        📚 Books
+                    </option>
+
+                    <option value="Electronics">
+                        💻 Electronics
+                    </option>
+
+                    <option value="Fashion">
+                        👕 Fashion
+                    </option>
+
+                    <option value="Food">
+                        🍔 Food
+                    </option>
+
+                    <option value="Accommodation">
+                        🏠 Accommodation
+                    </option>
+
+                    <option value="Services">
+                        🛠 Services
+                    </option>
+
+                    <option value="Other">
+                        📦 Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+
+                    Description
+
+                </label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe your item..."
+                    required>
+
+                </textarea>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+
+                    Phone Number
+
+                </label>
+
+                <input
+                    id="phone"
+                    type="text"
+                    placeholder="09XXXXXXXX"
+                    required>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+
+                    Product Image
+
+                </label>
+
+                <div class="upload-box">
+
+                    <input
+                        id="image"
+                        type="file"
+                        accept="image/*"
+                        required>
+
+                    <p>
+
+                        📷 Choose an image
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="preview-container">
+
+                <img
+                    id="preview"
+                    src=""
+                    alt="Preview">
+
+            </div>
+
+
+
+            <div
+                id="upload-status"
+                class="upload-status">
+
+            </div>
+
+
+
+            <button
+                id="submitBtn"
+                type="submit">
+
+                🚀 Post Item
+
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<script>
+
+const token = localStorage.getItem("token");
+
+if(!token){
+
+    alert("Please login first");
+
+    window.location.href="login.html";
+
+}
+
+</script>
+
+<script src="sell.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Market Chat</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="whatsapp-chat">
+
+    <!-- CHAT HEADER -->
+
+    <div class="chat-header">
+
+        <a href="inbox.html">←</a>
+
+        <div>
+
+            <h3 id="seller-name">Seller</h3>
+
+            <p id="online-status">Offline</p>
+
+            <small id="typing-status"></small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- OFFER BOX -->
+
+    <div
+    id="offer-box"
+    class="offer-box"
+    style="display:none;">
+
+        <h3>💰 Make Offer</h3>
+
+        <input
+        type="number"
+        id="offer-price"
+        placeholder="Enter amount">
+
+        <button
+        type="button"
+        onclick="sendOffer()">
+            Send Offer
+        </button>
+
+        <button
+        type="button"
+        onclick="closeOffer()">
+            Cancel
+        </button>
+
+    </div>
+
+
+
+    <!-- CHAT MESSAGES -->
+
+    <div
+    id="chat-messages"
+    class="messages">
+
+    </div>
+
+
+
+    <!-- IMAGE PREVIEW -->
+
+    <div
+    id="preview-container"
+    class="preview-container"
+    style="display:none;">
+
+        <img
+        id="preview-image"
+        src=""
+        alt="Preview">
+
+        <button
+        type="button"
+        id="remove-preview">
+
+            ✖
+
+        </button>
+
+    </div>
+
+
+
+    <!-- MESSAGE INPUT -->
+
+    <div class="message-input">
+
+        <!-- Hidden File -->
+
+        <input
+        type="file"
+        id="file"
+        style="display:none"
+        accept="image/*,.pdf,.doc,.docx">
+
+        <!-- Attachment -->
+
+        <button
+        type="button"
+        class="icon-btn"
+        onclick="document.getElementById('file').click()">
+
+            📎
+
+        </button>
+
+        <!-- Typing Area -->
+
+        <div class="composer">
+
+            <textarea
+            id="message"
+            rows="2"
+            placeholder="Type a message..."></textarea>
+
+            <!-- Emoji Picker -->
+
+            <div
+            id="emoji-picker"
+            class="emoji-picker"
+            style="display:none;">
+
+                <span>😀</span>
+                <span>😂</span>
+                <span>😍</span>
+                <span>😎</span>
+                <span>😭</span>
+                <span>❤️</span>
+                <span>👍</span>
+                <span>🔥</span>
+                <span>🎉</span>
+                <span>🙏</span>
+
+            </div>
+
+        </div>
+
+        <!-- Emoji -->
+
+        <button
+        type="button"
+        class="icon-btn"
+        id="emoji-btn">
+
+            😊
+
+        </button>
+
+        <!-- Offer -->
+
+        <button
+        type="button"
+        class="icon-btn"
+        onclick="openOffer()">
+
+            💰
+
+        </button>
+
+        <!-- Send -->
+
+        <button
+        type="button"
+        class="send-btn"
+        onclick="sendMessage()">
+
+            ➤
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="http://192.168.1.149:5000/socket.io/socket.io.js"></script>
+
+<script src="chat.js?v=4"></script>
+
+<script>
+    // Auto-scroll the message history to the bottom when the chat loads or updates
+    window.addEventListener('DOMContentLoaded', () => {
+        const messagesContainer = document.getElementById('chat-messages');
+        if (messagesContainer) {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    });
+
+    // Also observe changes in chat-messages so if chat.js loads history dynamically, it snaps down instantly
+    const observer = new MutationObserver(() => {
+        const messagesContainer = document.getElementById('chat-messages');
+        if (messagesContainer) {
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    });
+
+    const targetNode = document.getElementById('chat-messages');
+    if (targetNode) {
+        observer.observe(targetNode, { childList: true });
+    }
+</script>
+
+</body>
+
+</html>

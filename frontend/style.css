@@ -1,0 +1,1310 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter", Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#111827;
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    flex-wrap:wrap;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
+
+.logo h1{
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo p{
+    color:#cbd5e1;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.search-box{
+    flex:1;
+    max-width:600px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 22px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    font-size:16px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.actions a{
+    text-decoration:none;
+}
+
+.sell-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.sell-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+#message-count{
+    background:#ef4444;
+    color:white;
+    border-radius:50%;
+    padding:3px 8px;
+    font-size:12px;
+    margin-left:5px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+    width:90%;
+    margin:40px auto;
+    padding:60px;
+    border-radius:30px;
+    background:linear-gradient(135deg, #2563eb, #0f172a);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    overflow:hidden;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h1{
+    font-size:50px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#dbeafe;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.hero-btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    background:white;
+    color:#2563eb;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
+
+.sell-hero{
+    background:#22c55e;
+    color:white;
+}
+
+.hero-image{
+    font-size:160px;
+    opacity:.9;
+}
+
+/* =========================
+   MARKET STATS
+========================= */
+.market-stats{
+    width:90%;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+}
+
+.stat-card h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    color:#64748b;
+    font-weight:bold;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+.categories{
+    width:90%;
+    margin:45px auto;
+}
+
+.categories h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.categories>p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.category-list{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.category-list button{
+    background:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.category-list button:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PRODUCTS SECTION
+========================= */
+main{
+    width:90%;
+    margin:50px auto;
+}
+
+.section-title{
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:32px;
+}
+
+.section-title p{
+    color:#64748b;
+    margin-top:8px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    gap:25px;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.image-box{
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card:hover .image-box img{
+    transform:scale(1.05);
+}
+
+.heart-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:none;
+    background:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.2s;
+}
+
+.heart-btn:hover{
+    transform:scale(1.15);
+    background:#fef2f2;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#2563eb;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#64748b;
+    margin:8px 0;
+}
+
+.card-buttons{
+    display:flex;
+    gap:10px;
+    padding:15px 20px 20px;
+}
+
+.card-buttons button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.chat-btn{
+    background:#16a34a;
+    color:white;
+}
+
+.view-btn{
+    background:#2563eb;
+    color:white;
+}
+
+.card-buttons button:hover{
+    opacity:.85;
+}
+
+.category-badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#2563eb;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.market-badge{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    background:white;
+    color:#0f172a;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.product-info{
+    margin-top:15px;
+    padding-top:10px;
+    border-top:1px solid #e5e7eb;
+}
+
+.product-info p{
+    font-size:14px;
+    margin:6px 0;
+}
+
+.seller-name{
+    font-weight:600;
+    color:#475569 !important;
+}
+
+/* =========================
+   PRODUCT DETAIL PAGE
+========================= */
+.product-page{
+    width:90%;
+    margin:40px auto;
+}
+
+.product-detail-card{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    display:flex;
+    gap:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.product-image{
+    flex:1;
+}
+
+.product-image img{
+    width:100%;
+    max-width:500px;
+    height:450px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.detail-category{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:7px 15px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.product-info h1{
+    font-size:35px;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+.product-price{
+    color:#2563eb;
+    font-size:32px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.quick-info{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.quick-info p{
+    background:#f1f5f9;
+    padding:10px 15px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.description{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+    line-height:1.6;
+}
+
+.description h3{
+    margin-bottom:10px;
+}
+
+.seller-box{
+    margin-top:25px;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+}
+
+.seller-box h3{
+    margin-bottom:15px;
+}
+
+.seller-box h4{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.seller-box a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.seller-image{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #2563eb;
+}
+
+.chat-button{
+    width:100%;
+    margin-top:25px;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:#16a34a;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.chat-button:hover{
+    background:#15803d;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   SELLER PROFILE PAGE
+========================= */
+.seller-page{
+    width:90%;
+    margin:40px auto;
+}
+
+.seller-profile-card{
+    max-width:600px;
+    margin:30px auto;
+    background:white;
+    padding:35px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.1);
+}
+
+.seller-avatar{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:#eff6ff;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    overflow:hidden;
+    border:4px solid #2563eb;
+}
+
+.seller-profile-card h1{
+    font-size:30px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.seller-profile-card p{
+    color:#64748b;
+    margin:12px 0;
+    line-height:1.5;
+}
+
+.seller-status{
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534 !important;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.seller-bio{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:15px;
+}
+
+.seller-stats-card{
+    width:90%;
+    max-width:700px;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:20px;
+}
+
+.seller-stats-card div{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.seller-stats-card h3{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:8px;
+}
+
+.seller-stats-card p{
+    color:#64748b;
+    font-weight:bold;
+}
+
+.seller-actions{
+    width:90%;
+    max-width:500px;
+    margin:25px auto;
+}
+
+.seller-actions .chat-button{
+    margin-top:0;
+}
+
+.seller-page .section-title{
+    margin-top:45px;
+    font-size:28px;
+}
+
+/* =========================
+   SELLER RATING
+========================= */
+.rating-card{
+    width:90%;
+    max-width:500px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+}
+
+.rating-card h2{
+    margin-bottom:20px;
+}
+
+.stars{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+}
+
+.stars span{
+    font-size:40px;
+    cursor:pointer;
+    color:#f59e0b;
+    transition:.2s;
+}
+
+.stars span:hover{
+    transform:scale(1.2);
+}
+
+.rating-card textarea{
+    width:100%;
+    height:100px;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    resize:none;
+    margin-bottom:15px;
+}
+
+.rating-card button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:13px 30px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.rating-card button:hover{
+    background:#1d4ed8;
+}
+
+/* =========================
+   WHY SECTION
+========================= */
+.why-section{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+
+.why-section h2{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:25px;
+}
+
+.why-grid div{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.why-grid h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.why-grid p{
+    color:#64748b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+/* =========================
+   CHAT PAGE UPGRADE (ChatGPT / WhatsApp Layout)
+========================= */
+.whatsapp-chat{
+    width:100%;
+    max-width:850px;
+    height:90vh;
+    margin:20px auto;
+    background:#ffffff;
+    display:flex;
+    flex-direction:column;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    border:1px solid #e5e7eb;
+}
+
+.chat-header{
+    background:#ffffff;
+    color:#111827;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    min-height:65px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.chat-header a{
+    color:#111827;
+    text-decoration:none;
+    font-size:24px;
+}
+
+.chat-header h2{
+    font-size:18px;
+    font-weight:600;
+}
+
+.chat-header p{
+    font-size:13px;
+    color:#6b7280;
+}
+
+/* Messages area with top padding and bottom spacing so messages don't hide behind the bar */
+.messages{
+    flex:1;
+    padding:24px 20px;
+    overflow-y:auto;
+    background:#f9fafb;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.message-row{
+    display:flex;
+    margin-bottom:4px;
+}
+
+.message-row.mine{
+    justify-content:flex-end;
+}
+
+.message-row.theirs{
+    justify-content:flex-start;
+}
+
+.message-bubble{
+    max-width:75%;
+    padding:12px 16px;
+    border-radius:16px;
+    font-size:15px;
+    line-height:1.5;
+    word-wrap:break-word;
+}
+
+.mine .message-bubble{
+    background:#2563eb;
+    color:white;
+    border-bottom-right-radius:4px;
+}
+
+.theirs .message-bubble{
+    background:#ffffff;
+    color:#111827;
+    border-bottom-left-radius:4px;
+    border:1px solid #e5e7eb;
+}
+
+.message-time{
+    font-size:11px;
+    margin-top:4px;
+    display:flex;
+    justify-content:flex-end;
+    opacity:0.7;
+}
+
+/* =========================
+   CHAT INPUT (ChatGPT Style Floating Bar)
+========================= */
+.message-input{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 20px;
+    background:#ffffff;
+    border-top:1px solid #e5e7eb;
+    position:relative;
+    width:100%;
+}
+
+.composer{
+    flex:1;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:#f4f4f5;
+    border:1px solid #d4d4d8;
+    border-radius:26px;
+    padding:4px 16px;
+}
+
+.composer textarea{
+    width:100%;
+    min-height:24px;
+    max-height:120px;
+    padding:8px 0;
+    border:none;
+    resize:none;
+    outline:none;
+    font-size:15px;
+    line-height:1.4;
+    background:transparent;
+    color:#111827;
+}
+
+.composer textarea::placeholder{
+    color:#9ca3af;
+}
+
+.icon-btn{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:transparent;
+    color:#52525b;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.icon-btn:hover{
+    background:#e4e4e7;
+}
+
+.send-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#18181b;
+    color:white;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.send-btn:hover{
+    background:#27272a;
+}
+
+.emoji-picker{
+    position:absolute;
+    bottom:70px;
+    left:20px;
+    background:white;
+    border:1px solid #d4d4d8;
+    border-radius:12px;
+    padding:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    width:240px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    z-index:10;
+}
+
+.emoji-picker span{
+    font-size:20px;
+    cursor:pointer;
+    padding:4px;
+}
+
+/* =========================
+   IMAGE PREVIEW
+========================= */
+.preview-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    background:white;
+    border-top:1px solid #e5e7eb;
+}
+
+.preview-container img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    border:1px solid #d4d4d8;
+}
+
+#remove-preview{
+    width:32px;
+    height:32px;
+    border:none;
+    border-radius:50%;
+    background:#ef4444;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* =========================
+   INBOX
+========================= */
+.inbox-page{
+    width:90%;
+    max-width:750px;
+    margin:40px auto;
+}
+
+.inbox-container{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.inbox-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.search-messages{
+    width:100%;
+    padding:15px;
+    border-radius:25px;
+    border:1px solid #ddd;
+    margin-bottom:20px;
+}
+
+.conversation-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    background:#f8fafc;
+    border-radius:15px;
+    margin-bottom:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.conversation-card:hover{
+    background:#dbeafe;
+    transform:translateX(5px);
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.conversation-info{
+    flex:1;
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+.auth-page{
+    min-height:100vh;
+    background:linear-gradient(135deg, #2563eb, #0f172a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.auth-container{
+    width:100%;
+    max-width:420px;
+}
+
+.auth-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:fadeUp .5s;
+}
+
+.brand h1{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.brand p{
+    color:#64748b;
+}
+
+.security-icon{
+    width:70px;
+    height:70px;
+    margin:20px auto;
+    border-radius:50%;
+    background:#eff6ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+}
+
+.auth-card h2{
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.input-group{
+    background:#f8fafc;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:0 15px;
+    margin-bottom:15px;
+    display:flex;
+    align-items:center;
+}
+
+.input-group input{
+    flex:1;
+    padding:15px;
+    border:none;
+    outline:none;
+    background:transparent;
+}
+
+.auth-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.switch a,
+.forgot-password a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+@media(max-width:700px){
+    header{
+        padding:20px;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .logo{
+        text-align:center;
+    }
+
+    .actions{
+        flex-direction:column;
+    }
+
+    .sell-btn{
+        width:100%;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:35px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-image{
+        font-size:90px;
+    }
+
+    .product-detail-card{
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
+
+    .product-image img{
+        height:300px;
+        max-width:100%;
+    }
+
+    .product-info h1,
+    .product-price{
+        font-size:26px;
+    }
+
+    .quick-info{
+        flex-direction:column;
+    }
+
+    .quick-info p{
+        text-align:center;
+    }
+
+    .seller-box{
+        padding:15px;
+    }
+
+    .chat-button{
+        position:sticky;
+        bottom:10px;
+    }
+
+    /* PC-style fixed full-screen chat layout for mobile */
+    .whatsapp-chat{
+        width:100%;
+        height:100dvh;
+        margin:0;
+        border-radius:0;
+        border:none;
+        position:fixed;
+        top:0;
+        left:0;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .chat-header{
+        flex-shrink:0;
+    }
+
+    .messages{
+        flex:1 1 auto;
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        padding:20px;
+        min-height:0;
+        background:#f9fafb;
+    }
+
+    .message-input{
+        flex-shrink:0;
+        position:relative;
+        bottom:auto;
+        left:auto;
+        width:100%;
+        padding:16px 20px;
+        background:white;
+        z-index:100;
+        box-shadow:0 -4px 10px rgba(0,0,0,.05);
+    }
+
+    .composer{
+        padding:4px 16px;
+        border-radius:26px;
+    }
+
+    .composer textarea{
+        min-height:24px;
+        font-size:15px;
+        padding:8px 0;
+    }
+
+    .icon-btn{
+        width:38px;
+        height:38px;
+        font-size:18px;
+    }
+
+    .send-btn{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .preview-container img{
+        width:180px;
+        height:180px;
+    }
+
+    .emoji-picker{
+        width:240px;
+        bottom:70px;
+        left:20px;
+    }
+
+    .seller-page{
+        width:95%;
+    }
+
+    .seller-profile-card{
+        padding:25px;
+    }
+
+    .seller-profile-card h1{
+        font-size:25px;
+    }
+
+    .seller-stats-card{
+        width:95%;
+    }
+}

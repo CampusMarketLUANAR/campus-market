@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>🎓 Campus Market</h1>
+        <p>Student Marketplace</p>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Search products...">
+    </div>
+
+    <div class="actions">
+        <a href="inbox.html">
+            <button class="sell-btn">
+                📥 Messages
+                <span id="message-count" class="message-badge"></span>
+            </button>
+        </a>
+
+        <a href="transactions.html">
+            <button class="sell-btn">💳 Transactions</button>
+        </a>
+
+        <a href="sell.html">
+            <button class="sell-btn">➕ Sell Item</button>
+        </a>
+
+        <button class="sell-btn" onclick="logout()">🚪 Logout</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Buy, Sell & Connect<br>Around Campus 🚀
+        </h1>
+        <p>
+            The easiest marketplace for students. Find affordable items, sell what you no longer need, and connect with fellow students.
+        </p>
+        <div class="hero-buttons">
+            <a href="#products">
+                <button class="hero-btn">🛒 Explore Products</button>
+            </a>
+            <a href="sell.html">
+                <button class="hero-btn sell-hero">➕ Sell Item</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        🎓
+    </div>
+</section>
+
+<section class="market-stats">
+    <div class="stat-card">
+        <h2>🛍️</h2>
+        <p>Buy Affordable Items</p>
+    </div>
+    <div class="stat-card">
+        <h2>💰</h2>
+        <p>Sell & Make Money</p>
+    </div>
+    <div class="stat-card">
+        <h2>🤝</h2>
+        <p>Connect With Students</p>
+    </div>
+</section>
+
+<section class="categories">
+    <h2>Explore Categories</h2>
+    <p>Find exactly what you need around campus</p>
+
+    <div class="category-list">
+        <button onclick="filterCategory('Books')">📚 Books</button>
+        <button onclick="filterCategory('Electronics')">💻 Electronics</button>
+        <button onclick="filterCategory('Fashion')">👕 Fashion</button>
+        <button onclick="filterCategory('Food')">🍔 Food</button>
+        <button onclick="filterCategory('Accommodation')">🏠 Accommodation</button>
+        <button onclick="filterCategory('Services')">🛠 Services</button>
+        <button onclick="filterCategory('all')">🔄 All</button>
+    </div>
+</section>
+
+<main id="products-section">
+    <div class="section-title">
+        <h2>Latest Products</h2>
+        <p>Recently added items from students</p>
+    </div>
+
+    <div class="products" id="products"></div>
+</main>
+
+<section class="why-section">
+    <h2>Why Campus Market?</h2>
+    <div class="why-grid">
+        <div>
+            <h3>⚡ Easy</h3>
+            <p>Buy and sell in just a few clicks.</p>
+        </div>
+        <div>
+            <h3>🔒 Safe</h3>
+            <p>Connect directly with verified students.</p>
+        </div>
+        <div>
+            <h3>🌍 Local</h3>
+            <p>Everything happens around your campus.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h2>🎓 Campus Market</h2>
+    <p>The marketplace built for students.</p>
+</footer>
+
+<script src="http://192.168.1.149:5000/socket.io/socket.io.js"></script>
+<script src="script.js?v=2"></script>
+
+</body>
+
+</html>

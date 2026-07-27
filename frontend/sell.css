@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* ================= HEADER ================= */
+
+.topbar{
+    background:#0f172a;
+    color:white;
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.topbar h1{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.topbar p{
+    color:#cbd5e1;
+}
+
+.home-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ================= MAIN ================= */
+
+.sell-container{
+    max-width:850px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.sell-card{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.sell-card h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0f172a;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#374151;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:15px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    font-size:16px;
+    transition:.25s;
+    outline:none;
+    background:white;
+}
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* Textarea */
+
+.form-group textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+/* Dropdown */
+
+.form-group select{
+    cursor:pointer;
+}
+
+/* ================= IMAGE UPLOAD ================= */
+
+.upload-box{
+    position:relative;
+    border:2px dashed #94a3b8;
+    border-radius:18px;
+    padding:45px 20px;
+    text-align:center;
+    background:#f8fafc;
+    transition:.3s;
+    overflow:hidden;
+}
+
+.upload-box:hover{
+    border-color:#2563eb;
+    background:#eff6ff;
+}
+
+.upload-box input{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    cursor:pointer;
+}
+
+.upload-box p{
+    font-size:18px;
+    color:#475569;
+    font-weight:bold;
+}
+
+.upload-box::before{
+    content:"📷";
+    display:block;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+/* ================= PREVIEW ================= */
+
+#preview-container{
+    display:none;
+    margin:25px 0;
+    text-align:center;
+}
+
+#preview{
+    max-width:100%;
+    max-height:320px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* ================= STATUS ================= */
+
+.upload-status{
+    text-align:center;
+    color:#2563eb;
+    font-weight:bold;
+    margin-bottom:18px;
+    min-height:25px;
+}
+
+/* ================= BUTTON ================= */
+
+#submitBtn{
+    width:100%;
+    padding:17px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#submitBtn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+#submitBtn:disabled{
+    background:#94a3b8;
+    cursor:not-allowed;
+    transform:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .topbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .sell-card{
+        padding:22px;
+    }
+
+    .topbar h1{
+        font-size:24px;
+    }
+
+}

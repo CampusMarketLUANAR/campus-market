@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Transactions</title>
+
+    <link rel="stylesheet"
+        href="transactions.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+
+    <h1>
+        💳 My Transactions
+    </h1>
+
+
+    <div>
+
+        <a href="index.html">
+
+            <button>
+                🏠 Home
+            </button>
+
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+
+<!-- ================= TABS ================= -->
+
+
+<div class="tabs">
+
+
+    <button
+        class="tab active"
+        data-tab="all">
+
+        All
+
+    </button>
+
+
+
+    <button
+        class="tab"
+        data-tab="buying">
+
+        Buying
+
+    </button>
+
+
+
+    <button
+        class="tab"
+        data-tab="selling">
+
+        Selling
+
+    </button>
+
+
+</div>
+
+
+
+
+<!-- ================= LOADING ================= -->
+
+
+<div id="loading"
+     class="loading"
+     style="display:none;">
+
+
+    Loading transactions...
+
+
+</div>
+
+
+
+
+
+<!-- ================= TRANSACTIONS ================= -->
+
+
+<div
+    id="transactions-container"
+    class="transactions-container">
+
+
+</div>
+
+
+
+
+
+<!-- ================= EMPTY STATE ================= -->
+
+
+<div
+    id="empty-state"
+    class="empty-state"
+    style="display:none;">
+
+
+    <h2>
+        📦 No transactions found
+    </h2>
+
+
+    <p>
+
+        Your purchases and sales will appear here.
+
+    </p>
+
+
+
+    <a href="index.html">
+
+        <button>
+
+            Browse Products
+
+        </button>
+
+
+    </a>
+
+
+</div>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+
+
+    <p>
+
+        Campus Market © 2026
+
+    </p>
+
+
+</footer>
+
+
+
+
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+
+<script src="transactions.js"></script>
+
+
+</body>
+
+</html>

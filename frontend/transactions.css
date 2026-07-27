@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+.topbar{
+    background:#0f172a;
+    color:white;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.topbar h1{
+    font-size:26px;
+}
+
+.topbar button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.topbar button:hover{
+    background:#1d4ed8;
+}
+
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.tab{
+    border:none;
+    background:white;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+.tab.active{
+    background:#2563eb;
+    color:white;
+}
+
+.transactions-container{
+    max-width:1100px;
+    margin:20px auto;
+    padding:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:20px;
+}
+.transaction-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.transaction-card:hover{
+    transform:translateY(-4px);
+}
+
+.transaction-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.transaction-body{
+    padding:18px;
+}
+
+.transaction-body h2{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.transaction-body p{
+    margin:8px 0;
+    font-size:15px;
+    color:#555;
+}
+
+.price{
+    color:#16a34a;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.badge{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.badge.reserved{
+    background:#f59e0b;
+}
+
+.badge.completed{
+    background:#16a34a;
+}
+
+.badge.cancelled{
+    background:#dc2626;
+}
+.badge.paid{
+    background:#2563eb;
+    color:white;
+}
+
+.badge.collected{
+    background:#9333ea;
+    color:white;
+}
+
+.badge.completed{
+    background:#16a34a;
+    color:white;
+}
+
+.badge.cancelled{
+    background:#dc2626;
+    color:white;
+}
+.card-actions{
+    margin-top:18px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.card-actions button{
+    flex:1;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    color:white;
+}
+
+.complete-btn{
+    background:#16a34a;
+}
+
+.complete-btn:hover{
+    background:#15803d;
+}
+
+.cancel-btn{
+    background:#dc2626;
+}
+
+.cancel-btn:hover{
+    background:#b91c1c;
+}
+
+.loading,
+.empty-state{
+    text-align:center;
+    margin:50px auto;
+    font-size:18px;
+}
+
+.empty-state button{
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+    .topbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .transactions-container{
+        grid-template-columns:1fr;
+        padding:10px;
+    }
+
+    .transaction-card img{
+        height:180px;
+    }
+
+    .card-actions{
+        flex-direction:column;
+    }
+
+}

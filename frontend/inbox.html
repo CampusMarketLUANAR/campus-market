@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Market Inbox</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+    <div class="logo">
+
+
+        <h1>
+            Campus Market
+        </h1>
+
+
+        <p>
+            Student Marketplace
+        </p>
+
+
+    </div>
+
+
+
+
+    <a href="index.html">
+
+
+        <button class="sell-btn">
+
+            🏠 Home
+
+        </button>
+
+
+    </a>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<main class="inbox-page">
+
+
+    <div class="inbox-container">
+
+
+
+        <div class="inbox-header">
+
+
+            <h2>
+                📥 Messages
+            </h2>
+
+
+            <span id="message-count">
+
+            </span>
+
+
+        </div>
+
+
+
+
+
+
+        <input 
+
+        type="text"
+
+        id="searchMessages"
+
+        placeholder="Search conversations..."
+
+        class="search-messages"
+
+        >
+
+
+
+
+
+
+
+        <div id="conversations">
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- SOCKET.IO -->
+<script src="http://192.168.1.149:5000/socket.io/socket.io.js"></script>
+
+<!-- INBOX SCRIPT -->
+<script src="inbox.js"></script>
+
+</body>
+
+</html>

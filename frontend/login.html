@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Campus Market - Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="brand">
+
+            <h1>
+                🎓 Campus Market
+            </h1>
+
+            <p>
+                Buy and sell within your campus community
+            </p>
+
+        </div>
+
+        <h2>
+            Welcome Back 👋
+        </h2>
+
+        <p class="subtitle">
+            Login to continue
+        </p>
+
+        <div class="input-group">
+
+            <span>📧</span>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="Enter your email">
+
+        </div>
+
+        <div class="input-group">
+
+            <span>🔒</span>
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Enter your password">
+
+            <button
+                type="button"
+                id="togglePassword">
+
+                👁
+
+            </button>
+
+        </div>
+
+        <button
+            class="auth-btn"
+            onclick="login()">
+
+            Login
+
+        </button>
+
+        <p id="login-message"></p>
+
+        <p class="forgot-password">
+
+            <a href="forgot-password.html">
+                Forgot Password?
+            </a>
+
+        </p>
+
+        <p class="switch">
+
+            Don't have an account?
+
+            <a href="register.html">
+                Create Account
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+
+</html>

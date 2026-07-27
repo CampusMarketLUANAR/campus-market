@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Product - Campus Market</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    background:#f3f4f6;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+}
+
+
+
+.edit-container{
+
+    width:100%;
+    max-width:500px;
+
+}
+
+
+
+.edit-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+}
+
+
+
+h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#222;
+
+}
+
+
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+}
+
+
+
+textarea{
+
+    resize:none;
+
+}
+
+
+
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+
+}
+
+
+
+#current-image{
+
+    width:140px;
+
+    height:140px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.image-box{
+
+    border:2px dashed #ccc;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+#message{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+
+
+@media(max-width:500px){
+
+    .edit-card{
+
+        padding:20px;
+
+    }
+
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="edit-container">
+
+
+<div class="edit-card">
+
+
+<h2>
+✏️ Edit Product
+</h2>
+
+
+
+<form id="edit-product-form">
+
+
+
+<input 
+type="text" 
+id="name"
+placeholder="Product name"
+required>
+
+
+
+<input 
+type="number"
+id="price"
+placeholder="Price"
+required>
+
+
+
+
+<select id="category">
+
+<option value="">
+Select category
+</option>
+
+<option>
+Electronics
+</option>
+
+<option>
+Books
+</option>
+
+<option>
+Clothing
+</option>
+
+<option>
+Food
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+
+
+
+<textarea
+id="description"
+placeholder="Description"
+rows="5"></textarea>
+
+
+
+
+<input
+type="text"
+id="phone"
+placeholder="Phone number">
+
+
+
+<label>
+Current Product Image
+</label>
+
+
+<div class="image-box">
+
+
+<img 
+id="current-image"
+src=""
+alt="Product image">
+
+
+
+<input
+type="file"
+id="image">
+
+
+</div>
+
+
+
+
+<button type="submit">
+
+Save Changes
+
+</button>
+
+
+
+<p id="message"></p>
+
+
+
+</form>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="edit-product.js"></script>
+
+
+</body>
+
+</html>
