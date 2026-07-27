@@ -1,9 +1,9 @@
-const API_URL = "http://192.168.1.149:5000/products";
+const API_URL = "https://campus-market-92ie.onrender.com";
 
 
 // ================= SOCKET.IO =================
 
-const socket = io("http://192.168.1.149:5000");
+const socket = io("https://campus-market-92ie.onrender.com");
 
 
 const currentUser = JSON.parse(
@@ -496,7 +496,7 @@ try{
 const response =
 await fetch(
 
-"http://192.168.1.149:5000/messages/inbox",
+"https://campus-market-92ie.onrender.com/messages/inbox"
 
 {
 
@@ -614,7 +614,7 @@ async function deleteProduct(id){
     try{
 
         const response = await fetch(
-            `http://192.168.1.149:5000/products/${id}`,
+            `https://campus-market-92ie.onrender.com/products/${id}`,
             {
                 method:"DELETE",
                 headers:{

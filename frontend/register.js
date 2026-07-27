@@ -57,7 +57,7 @@ async function register(){
         const response =
         await fetch(
 
-            "http://192.168.1.149:5000/auth/register",
+            "https://campus-market-92ie.onrender.com/auth/register",
 
             {
 

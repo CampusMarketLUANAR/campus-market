@@ -1,9 +1,9 @@
-const API_URL = "http://192.168.1.149:5000";
+const API_URL = "https://campus-market-92ie.onrender.com";
 
 
 // ================= SOCKET =================
 
-const socket = io(API_URL);
+const socket = io("https://campus-market-92ie.onrender.com");
 
 
 // ================= USER =================
