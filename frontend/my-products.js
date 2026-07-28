@@ -1,4 +1,4 @@
-const API_URL = "https://campus-market-92ie.onrender.com";
+const API_URL = "https://campus-market-92ie.onrender.com/products";
 const token = localStorage.getItem("token");
 
 if (!token) {
