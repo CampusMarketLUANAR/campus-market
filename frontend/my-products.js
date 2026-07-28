@@ -8,7 +8,7 @@ if (!token) {
 
 async function loadMyProducts() {
     try {
-        const response = await fetch(`${API_URL}/products/my`, {
+        const response = await fetch(`${API_URL}/my`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -68,7 +68,7 @@ async function deleteProduct(id) {
     if (!ok) return;
 
     try {
-        const response = await fetch(`${API_URL}/products/${id}`, {
+        const response = await fetch(`${API_URL}/${id}`, {
             method: "DELETE",
             headers: {
                 Authorization: `Bearer ${token}`
