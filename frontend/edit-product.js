@@ -28,10 +28,10 @@ async function loadProduct(){
 
     try{
 
+        
         const response = await fetch(
-            `${API_URL}/products/${productId}`
-        );
-
+    `${API_URL}/${productId}`
+);
 
         const product = await response.json();
 
@@ -151,7 +151,7 @@ async function(e){
 
         const response =
         await fetch(
-            `${API_URL}/products/${productId}`,
+    `${API_URL}/${productId}`,
             {
 
                 method:"PUT",
