@@ -493,25 +493,14 @@ if(!token) return;
 try{
 
 
-const response =
-await fetch(
-
-"https://campus-market-92ie.onrender.com/messages/inbox"
-
-{
-
-headers:{
-
-"Authorization":
-
-`Bearer ${token}`
-
-}
-
-}
-
+const response = await fetch(
+    "https://campus-market-92ie.onrender.com/messages/inbox",
+    {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
 );
-
 
 if(!response.ok) return;
 
