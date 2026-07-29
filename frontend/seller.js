@@ -1,4 +1,4 @@
-const API_URL = "https://campus-market-92ie.onrender.com/users";
+const API_URL = "https://campus-market-92ie.onrender.com";
 
 
 let selectedRating = 0;
